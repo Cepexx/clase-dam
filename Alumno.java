@@ -11,7 +11,13 @@ public class Alumno {
      * Crea un alumno nuevo
      */
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
+        if (nombreCompleto.length() < 3){
+            System.out.println("Error, el nombre es demasiado corto");
+        }
         nombre = nombreCompleto;
+        if (numeroMatriculaAlumno.length() < 4){
+            System.out.println("Error, el número de matrícula es demasiado corto");
+        }
         numeroMatricula = numeroMatriculaAlumno;
         edad = edadAlumno;
     }
